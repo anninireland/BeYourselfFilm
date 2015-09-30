@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Be Yourself</title>
+	<meta name="description" content="Be Yourself is a new short film exploring first impressions">
+	<meta name="author" content="Lisa Cavern">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- lifted from boostrap html template -->
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="container">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" style="margin-top: 2%">
+				<header class="text-center">
+					<h1>Be Yourself</h1>
+
+					<!-- no nav on this page - users must be logged in to see content -->
+
+				</header>
+			</div> <!-- twelve columns -->
+		</div> <!-- row -->
+	</div> <!-- container -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1" style="margin-top:2%">
+				<div class="login text-center topgap">
+					<p><strong>LOGIN TO ENTER</strong></p>
+					<form class="form-group text-left center-block" name="login"  method="post" action="watch.html" onsubmit="return loginValidate()">
+						<label for="username">USERNAME: </label><div id="uerror"></div>
+						<input class="form-control" type="text" id="username" name="username" autofocus></input><br>
+						<label for="password">PASSWORD: </label><div id="perror"></div>
+						<input class="form-control" type="password" id="password" name="password"></input><br>
+						<div class="contactbuttons"> <!-- sets button to right edge -->
+							<input class="btn btn-default" type="submit" value="Submit" >
+						</div>
+					</form>
+				</div> <!-- login -->
+			</div> <!--  columns -->
+		</div> <!-- row -->
+	</div> <!-- container -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4"> 	
+				<div class="screenings text-center">
+					<h2>Screenings</h2>
+					<p>12 May, 8pm, Against the Grain</p>
+					<p>18 May, 9pm, Filmbase</p>
+					<p>TBD</p>
+					<p>TBD</p>
+					<p>TBD</p>
+				</div> <!-- screenings -->
+			</div> <!-- offset-by-two eight columns -->
+		</div> <!-- row -->
+	</div> <!-- container -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2 col-md-offset-10" style="margin-top:2%">
+				<div class="contact">
+					<p data-toggle="modal" data-target="#contactform" onmouseover=" this.style.color='#0E7273';" onmouseout="this.style.color='#303130';">Contact Us</p>
+				</div> <!-- contact --> 
+			</div> <!-- one column --> 
+		</div> <!-- row -->
+	</div> <!-- container -->
+
+</div>  <!-- MAIN container -->
+
+<!-- End of main content 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+ <!-- contact form modal --> 
+ <!-- the framework of this modal is taken from the 'stock' bootstrap modal.
+ id,class,content, and buttons have been changed to suit this site and purpose -->
+
+<div class="modal fade" id="contactform" tabindex="-1" role="dialog" aria-labelledby="contact" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h3 class="modal-title text-center" id="contact">Send Us a Message</h3>
+			</div>
+			<div class="modal-body form-group">
+				<form class="form-group text-left center-block" name="contact"  method="post" action="#" onsubmit="return contactValidate()">
+					<label for="comment">Comment: </label><div></div>
+					<textarea class="form-control" rows="3" id="comment" name="comment" placeholder="Tell us what you think"></textarea>
+					<label for="email">Your Email: </label><div></div>
+					<input class="form-control" type="email" id="email" name="email" placeholder="required if you want a reply"></input><br>
+					<div class="contactbuttons"> <!-- sets buttons to right edge -->
+						<button type="button" class="btn btn-fade" data-dismiss="modal">cancel</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal" value="Submit">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- js -->
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>
